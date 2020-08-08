@@ -27,7 +27,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
-                                    <segue destination="woE-IZ-Pi6" kind="presentation" modalPresentationStyle="fullScreen" id="375-jE-brf"/>
+                                    <segue destination="8Ea-ms-RKa" kind="presentation" modalPresentationStyle="fullScreen" id="2D4-Dc-YI3"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qM9-VA-W0E">
@@ -95,12 +95,39 @@
                     </view>
                     <navigationItem key="navigationItem" id="R39-9g-Iur">
                         <barButtonItem key="backBarButtonItem" title="Cancel" id="wvC-2p-VZs"/>
-                        <barButtonItem key="leftBarButtonItem" title="Item" id="wee-BY-qmb"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="wee-BY-qmb">
+                            <connections>
+                                <action selector="cancelButton:" destination="woE-IZ-Pi6" id="2N6-72-YB5"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="j0i-k8-2ou" kind="unwind" identifier="exit" unwindAction="exitWithSegue:" id="UTI-f8-uhA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N9s-eB-UHE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="j0i-k8-2ou" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="726" y="128"/>
+            <point key="canvasLocation" x="1618" y="127"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Wop-9s-LSP">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8Ea-ms-RKa" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="k69-em-M3f"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="8n6-AJ-zhr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="woE-IZ-Pi6" kind="relationship" relationship="rootViewController" id="p5d-Yi-NuS"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aVT-Or-yyq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="832.79999999999995" y="127.28635682158921"/>
         </scene>
     </scenes>
 </document>

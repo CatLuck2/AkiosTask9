@@ -14,31 +14,16 @@ import UIKit
 
 class SelectViewController: UIViewController {
     
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        settingNavBar()
-    }
+    var prefectureValue:String!
     
     //4つのボタンをまとめた
     @IBAction private func button(_ sender: UIButton) {
-        let ud = UserDefaults.standard
-        ud.set(sender.titleLabel?.text, forKey: "prefectures")
-        back()
+        prefectureValue = sender.titleLabel!.text!
+        performSegue(withIdentifier: "exit", sender: nil)
     }
     
-    private func settingNavBar() {
-        let navBar = UINavigationBar()
-        //ノッチありのデバイスにも対応
-        navBar.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.safeAreaInsets.top)
-        //Cancelボタン
-        let navItem = UINavigationItem()
-        navItem.leftBarButtonItem = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(back))
-        navBar.pushItem(navItem, animated: true)
-        self.view.addSubview(navBar)
+    @IBAction func cancelButton(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
     }
     
-    @objc private func back() {
-        self.dismiss(animated: true, completion: nil)
-    }
-
 }

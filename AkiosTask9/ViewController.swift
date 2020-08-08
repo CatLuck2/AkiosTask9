@@ -12,10 +12,9 @@ class ViewController: UIViewController {
     
     @IBOutlet private weak var selectedPrefectures: UILabel!
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        let ud = UserDefaults.standard
-        selectedPrefectures.text = ud.object(forKey: "prefectures") as? String ?? "未選択"
+    @IBAction func exit(segue:UIStoryboardSegue) {
+        guard let selectVC = segue.source as? SelectViewController else { return }
+        selectedPrefectures.text = selectVC.prefectureValue ?? "未選択"
     }
     
 }
