@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     
     @IBAction func exit(segue:UIStoryboardSegue) {
         guard let selectVC = segue.source as? SelectViewController else { return }
-        selectedPrefectures.text = selectVC.prefectureValue ?? "未選択"
+        selectedPrefectures.text = selectVC.selectedPrefecture.displayName
     }
     
 }

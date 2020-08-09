@@ -47,7 +47,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-13.6" y="128.18590704647679"/>
+            <point key="canvasLocation" x="126" y="127"/>
         </scene>
         <!--Select View Controller-->
         <scene sceneID="hko-yP-QK9">
@@ -62,7 +62,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="神奈川県"/>
                                 <connections>
-                                    <action selector="button:" destination="woE-IZ-Pi6" eventType="touchUpInside" id="fJq-vB-Zjs"/>
+                                    <action selector="didTapKanagawa:" destination="woE-IZ-Pi6" eventType="touchUpInside" id="9hz-ls-vIg"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YcP-nK-T5G">
@@ -70,7 +70,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="千葉県"/>
                                 <connections>
-                                    <action selector="button:" destination="woE-IZ-Pi6" eventType="touchUpInside" id="KKn-gN-eLG"/>
+                                    <action selector="didTapChiba:" destination="woE-IZ-Pi6" eventType="touchUpInside" id="BsB-L9-SNO"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AJu-Lu-qbO">
@@ -78,7 +78,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="埼玉県"/>
                                 <connections>
-                                    <action selector="button:" destination="woE-IZ-Pi6" eventType="touchUpInside" id="F1u-qm-LEE"/>
+                                    <action selector="didTapSaiatama:" destination="woE-IZ-Pi6" eventType="touchUpInside" id="KJ4-XU-7Ba"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xsn-Fy-d9Q">
@@ -86,7 +86,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="東京都"/>
                                 <connections>
-                                    <action selector="button:" destination="woE-IZ-Pi6" eventType="touchUpInside" id="1AK-us-L2d"/>
+                                    <action selector="didTapTokyo:" destination="woE-IZ-Pi6" eventType="touchUpInside" id="5vO-9c-3MD"/>
                                 </connections>
                             </button>
                         </subviews>
